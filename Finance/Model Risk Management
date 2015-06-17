@@ -1,0 +1,8 @@
+Model Risk: Financial institutions rely on financial and economical model for lots of applications such as risk management, asset pricing, valuation, financial / regulatory reporting. Usage of model could introduce the institute model risk due to model's complexity,which may cause financial loss, incorrect business decision, misstatement of external disclosure.[1]
+
+Model Risk exists due to:
+a. errors in model design and development including errors in data, theory, stastistic analysis, assumption and code.
+b. misuse the model or model result.
+c. model performance could not meet standard.
+
+[1] http://www.pwc.com/us/en/model-risk-management-services/index.jhtml
