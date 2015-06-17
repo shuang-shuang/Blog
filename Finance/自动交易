@@ -1,0 +1,18 @@
+
+
+
+自动交易：           
+          
+          策略交易：      程序化交易（Program Trading）： 接受市场数据(文华财经，bloomberg)，利用计算机语言(脚本，Matlab, R)
+                                                          构建交易模型，找出买卖点并自动执行订单。
+
+          
+                          高频交易(HFT)：      
+          
+          
+          执行交易：      算法交易(Algo Trade)：狭义指利用算法分割订单减少冲击成本(Impact Cost)。冲击成本指在套利交易中需
+                                                要迅速而且大规模地买进或者卖出证券，未能按照预定价位成交，从而多支付的成本
+                                                冲击成本与买卖规模和市场流动性有关.
+          也可以划分为 1. Quantitative Trading (Trade what, size, when to trade)
+                       2. Algorithmic Trading（How to trade by given the order from 1).
+
