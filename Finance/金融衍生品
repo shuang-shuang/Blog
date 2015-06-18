@@ -1,5 +1,39 @@
 
-Options
+Derivatives is the finanacial instrument whose values depends on or derive from another asset. including futures,
+            options, swaps, forwards, exotics. Transfering risk. could be traded in SE or Over the Counter (OTC)
+            market. Underlying assets could be stock, currency, commodity, interest rates, debt instruments etc.
+            
+Options:   option is a contract which gives the buyer (the owner or holder) the right, but not the obligation, 
+           to buy or sell an underlying asset or instrument at a specified strike price on or before a specified date,
+           depending on the form of the option.
+           Warrant: A warrant is a security that gives the holder the right, but not the obligation, to buy a 
+           common share directly from the company at a fixed price for a pre-defined time period. 
 
-Futures
+Options vs Warrant: Warrants are issued by a specific company, while exchange-traded options are issued by an
+          options exchange such as the Chicago Board Options Exchange. warrants have few standardized features.
+          Warrants usually have longer maturity periods than options. While warrants generally expire in one to
+          two years, and can sometimes have maturities well in excess of five years, options have maturities
+          ranging from a few weeks or months to about a year or two. Warrants cause dilution because a company
+          is obligated to issue new stock when a warrant is exercised
+
+
+Futures:  Futures contract is an agreement that represents a specific quantity of the underlying commodity to be 
+          delivered some time in the future for a pre-agreed price.
+
+Forwards: A forward contract is a financial agreement in which the buyer agrees to pay the seller a predetermined
+          price for a specified quantity of a commodity to be delivered at some point in the future
+          
+Futures vs Forwards: Futures are standarlized and traded in exchanges; Forwards are privately negociated and traded
+          in OTC, so it has more credit risk to default. Futures has clearing housre(清算中心提供结算与交割) to guaranty
+          the transactions. Also Futures has second markets to provide liquidity while Forward does not. Settlement
+          of Forwards occurs at the end of contract, delivery of the asset usually take place. Futures settlement 
+          can occur in a couple of dates and daily changes are settled day by day (futures positions are marked-to-market
+          daily, with margins required to be posted and maintained by all participants at all times). futures contracts
+          are quite frequently employed by speculators, who bet on the direction in which an asset's price will move,
+          they are usually closed out prior to maturity and delivery usually never happens. 
+
+Swaps:    Swap is a derivative in which two counterparties exchange cash flows of one party's financial instrument for
+          those of the other party's financial instrument.
+
+Exotics:  Other complex non-standard derivatives.
 
