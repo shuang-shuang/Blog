@@ -23,6 +23,18 @@ Futures:  Futures contract is an agreement that represents a specific quantity o
 Forwards: A forward contract is a financial agreement in which the buyer agrees to pay the seller a predetermined
           price for a specified quantity of a commodity to be delivered at some point in the future
           
+Arbitrage:
+1. Suppose that:
+The spot price of gold is US$1,400; The 1-year forward price of gold is US$1,500; The 1-year US$ interest rate is
+5% per annum
+The forward price should be 1400 * (1 + 5%) ^ 1 = 1470 < 1500. So short Forward. 
+Borrow $1400 buy gold, and sell (short) 1-year forward. After 1 year. sell gold, return $1400 * 1.05, earn $30
+2. The spot price of gold is US$1,400; The 1-year forward price of gold is US$1,400; The 1-year US$ interest rate
+is 5% per annum
+If you have gold, sell gold, buy 1-year forward, invest (lend) $1400, After 1 year, buy gold with forward.
+earn 1400 * 0.05 = $70.
+
+          
 Futures vs Forwards: Futures are standarlized and traded in exchanges; Forwards are privately negociated and traded
           in OTC, so it has more credit risk to default. Futures has clearing housre(清算中心提供结算与交割) to guaranty
           the transactions. Also Futures has second markets to provide liquidity while Forward does not. Settlement
