@@ -1,0 +1,14 @@
+
+
+
+Value at Risk (VAR) calculates the maximum loss expected (or worst case scenario) on an investment, over a given time period
+      and given a specified degree of confidence.
+Three ways to calculate:
+1. The historical method simply re-organizes actual historical returns, putting them in order from worst to best. It then
+   assumes that history will repeat itself, from a risk perspective.
+2. The Variance-Covariance Method assumes that stock returns are normally distributed. Plot the normal distribution curve with
+   historical data
+3. Monte Carlo Simulation: This  method involves developing a model for future stock price returns and running multiple 
+   hypothetical trials through the model.
+
+
