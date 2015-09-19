@@ -1,2 +1,28 @@
-1. Git is distributed verstion control system storing complete file other than file diff (delta) in other vcs (like perforce, cvs).
+1. Git is distributed verstion control system storing complete file (except files without change: symbolic link)
+   other than file diff (delta) in other vcs (like perforce, cvs).
+   
+2. Each file has three states in git:
+   committed: data has been stored in database.
+   modified:  data is modified but has not yet committed.
+   staged:    data is marked as modified in current version to be committed in next commitment.
+   
+   the above leads to 3 locations in git: a. the git direction (repository) b. working directory c. staging area
+   a saves meta data and database for all data, a is clone from server. check out data from a to b
+   b is one version of a to be used or modified
+   c is a file generally in git directory stores info what is goting into next commit
+   
+3. To use git :
+   create a new local repository: 
+   git init: create .git directory (saving mata data and database)
+   git add: stage the files either new or modified
+   git status: check status of files (A:added M:modified)
+   git commit: submit changes; git commit -a: would automatically stage all tracked files avoiding manually adding
+   git rm: remove file from both hd and git; git rm -cached file retain file in hd
+   git mv: rename file
+   git branch: create new branch from master
+   git checkout branchname: switch branch, head would point to it.
+   git merge: merge different branches. would cause conflict if having changes in same place.
+   git clone: copy reporsitory from remote server;
+   
+   
 
