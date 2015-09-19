@@ -1,1 +1,2 @@
-   
+1. Git is distributed verstion control system storing complete file other than file diff (delta) in other vcs (like perforce, cvs).
+
