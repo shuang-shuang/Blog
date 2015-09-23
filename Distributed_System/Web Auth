@@ -1,0 +1,14 @@
+1. 2 ways in server authentication: Cookie and Token based
+  Cookie based has been used in a long time. 
+  a. user send usernam & password to server request auth
+  b. server pass auth and Set-Cookie: session = 'cookie'
+  c. user send all requests with cookie
+  modern token based auth:
+  a. user send request: post /authentiaction username = '' && password = ''
+  b. server reply a token: http: 200 (token'abdfadafd...')
+  c. user send request get /user Authorization: token
+  
+  Use SSL in both cases to avoid auth info disclosre. See Json Web Token
+  Ref: http://segmentfault.com/q/1010000000610275
+       http://stackoverflow.com/questions/319530/restful-authentication
+  
