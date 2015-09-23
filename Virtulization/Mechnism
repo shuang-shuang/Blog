@@ -1,0 +1,2 @@
+1. hypercall is synchronized communication like system call in OS, 
+   Event Channel is asychronized communication between DomUs and DomU with Dom0
