@@ -1,0 +1,9 @@
+process
+
+1. application running in user space: 
+   accept user input (list process, network, files etc.), call ioctl to communicate with driver in kernel.
+2. kernel driver registers event channel in initialization.  driver receive parameters and set sys_eip in domU
+   as invalid value through hypercall to catch guest os trap.  then driver get the sys_esp value through 
+   share memory in xen and kernel (by mapping certain domU memory space to dom0 kernel space). So
+   we get the current thread pointer in DomU, we copy the mem from DomU to Dom0, iterate the two way linked list
+   of tasks to recover the semantics in DomU
