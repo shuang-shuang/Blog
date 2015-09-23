@@ -1,0 +1,9 @@
+1. normal exploit: overwrite the esp with your payload when executing 'ret'
+   so EIP would point to your shellcode to execute
+
+2. Data Execution Prevent (DEP) && Address Space Layout Randomization (ASLR)
+   DEP prevent data (or code) in certain area especially stack to execute instructions, requiring hardware support
+   ASLR randomly lay the memory structure and module to counterfeit ROP
+   
+3. Return Oriented Programming (ROP): make the eip point to other legitimate module in the process, you can search 
+   specific instructions you want, jump there, use several similar gadget to bypass DEP
