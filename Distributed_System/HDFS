@@ -1,0 +1,6 @@
+
+HDFS is consisted of NameNode, DataNode, Clients
+1. NameNode stores meta data, files blocks info
+2. DataNode stores two files: data blocks and block size + timestamp info
+3. Client makes operations, request resource location from NameNode and directly communicate with DataNode
+4. DataNode has to be authenticated by NameNode, send heartbeat to maintain connection and report current status.
