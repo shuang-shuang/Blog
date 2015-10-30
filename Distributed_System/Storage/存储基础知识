@@ -1,0 +1,11 @@
+1. DAS / SAN / NAS
+Network Attached Storage 可以理解为针对存储优化过的server，通过TCP/IP接入网络供应用服务器访问，其接口可以为HTTP,NFS,CIFS。
+NAS有自己的CPU，内存，多块硬盘支持Raid，运行为文件共享剪裁过的操作系统(Freebsd或linux精简)。
+
+Direct Attached Storage 直连存储指服务器与存储设备之间直接相连(SATA,SCSI,USB接口等)，没有FC网络或以太网，比如个人电脑的移
+动硬盘或光盘驱动器就可以算DAS。由于每个主板都连自己的存储设备，可管理性，可扩展性都较差。DAS存储只能被与它相连的HOST访问，
+即DAS存储与host是1对1关系，而SAN是多对多关系(由于Switch)。
+
+Storage Area Network 是一种高速网络用来在服务器与存储系统间传输数据。它一般包含FC(Fibre Channel)交换机与磁盘阵列(RAID)或
+磁带机。SAN可以为多台服务器提供集中式存储，但是他只提供块级别存储，应用服务器要自己提供文件系统支持。SAN也可以通过FC与
+NAS相连作为NAS后端存储使用。SAN可以视作将DAS使用高速网络与高性能RAID加强了。
