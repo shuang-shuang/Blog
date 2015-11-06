@@ -12,15 +12,20 @@ Stack
 
                         Text Segment (binary code)
 Static & Extern
-Static is used before local, global variables and functions to make them only visible in the same source file. static local variable also stores in data segments other than stack and life cycle is longer than function. Extern declare the variable is defined in another compile unit. function is by default decorated by extern;
+Static is used before local, global variables and functions to make them only visible in the same source file. static local
+variable also stores in data segments other than stack and life cycle is longer than function. Extern declare the variable
+is defined in another compile unit. function is by default decorated by extern;
 
 inline & define
-inline function tells the compiler to replace the function body with function calling other than switching context to save statck. inline is similar to normal function calling, it will check the parameters and easy 
-to debug. While macro does not check parameters and is potential unsafe, unable to debug. Thus,
-not recommend to define complex functions.
+inline function tells the compiler to replace the function body with function calling other than switching context to save
+statck. inline is similar to normal function calling, it will check the parameters and easy 
+to debug. While macro does not check parameters and is potential unsafe, unable to debug. Thus, not recommend to define
+complex functions.
 
 Volatile
-in C, this keyword tells compiler that the variable could be modified by other threads anytime, do not optimize its access (e.g save it in cache or register). Volatile has similar function in Java, however it does not guarantee atom operations, You should use synchronized keyword.
+in C, this keyword tells compiler that the variable could be modified by other threads anytime, do not optimize its access
+(e.g save it in cache or register). Volatile has similar function in Java, however it does not guarantee atom operations,
+You should use synchronized keyword.
 
 attribute 
 attribute((function/variable/type)) 放在函数申明的分号；之前，让编译器检查优化函数。
