@@ -1,0 +1,35 @@
+Memory Layout for C:
+
+Address: High Command Line & Environment Variables
+Stack
+
+                        Heap
+
+                        Data Segment (global and static variables):
+                                                 BSS (Uninitialized Segment, would be initialized to 0 by loader)
+
+                                                 Initialized Segment (includes read only constant strings)
+
+                        Text Segment (binary code)
+Static & Extern
+Static is used before local, global variables and functions to make them only visible in the same source file. static local variable also stores in data segments other than stack and life cycle is longer than function. Extern declare the variable is defined in another compile unit. function is by default decorated by extern;
+
+inline & define
+inline function tells the compiler to replace the function body with function calling other than switching context to save statck. inline is similar to normal function calling, it will check the parameters and easy 
+to debug. While macro does not check parameters and is potential unsafe, unable to debug. Thus,
+not recommend to define complex functions.
+
+Volatile
+in C, this keyword tells compiler that the variable could be modified by other threads anytime, do not optimize its access (e.g save it in cache or register). Volatile has similar function in Java, however it does not guarantee atom operations, You should use synchronized keyword.
+
+attribute 
+attribute((function/variable/type)) 放在函数申明的分号；之前，让编译器检查优化函数。
+例如add(int a, int b)attribute((const)) 多次调用同一参数时会优化只调用一次。
+int a__attribute__((aligned 8)) = 10; 8字节对齐分配
+
+Function Pointers
+int (pointer_name) (int a, int b); a pointer point to function address just like variable or array.
+int (test) (int a, int b) = add;
+test (2, 3) is equal to add(2, 3);
+typedef int (myfunc) (int, int) is define a type myfunc as int () (int, int)
+myfunc f = func1; use it as f(2, 3) = func1(2, 3)
