@@ -38,3 +38,27 @@ int (test) (int a, int b) = add;
 test (2, 3) is equal to add(2, 3);
 typedef int (myfunc) (int, int) is define a type myfunc as int () (int, int)
 myfunc f = func1; use it as f(2, 3) = func1(2, 3)
+
+
+Virtual Function
+virtual function is used in C++ to implement polymorphism. When a class clarify virtual functions or inherate from parent
+class, the compiler assign virtual table (vtable) which is collection of pointers to virtual functions. The class would 
+also have a vtable pointer to the virtual table. When the object is to call the function, it looks up the Class it points
+to and get the vtable pointer then get the function address from virtual table.
+class A{
+public:                                      vtptr: point to Array
+    virtual func1();                         Array[0]: address of A::func1
+    virtual func2();                         Array[1]: address of A::func2
+    virtual func3();                         Array[2]: address of A::func3
+}
+class B : class A{
+public:                                      vtptr: point to Array
+    virtual func1();                         Array[0]: address of B::func1
+    virtual func5();                         Array[1]: address of A::func2
+}                                            Array[2]: address of A::func3
+                                             Array[3]: address of B::func5
+
+A * a = new B(); a.func1();
+When run a.func1(); Though a is type A but it points to Type B, so we get B's vtptr. then it looks up address of func1
+in B's vtable.
+
