@@ -55,4 +55,10 @@ Boot loader是引导操作系统启动的代码，负责将操作系统的实际
 既可以直接加载Windows操作系统，也可以跳转到Linux安装分区的Boot sector，由Boot secotr的Boot loader再加载操作系统。
 Windows在安装时会霸道地覆盖到MBR及其安装分区的Boot sector，因此双系统应该先将windows后装linux， 安装linux时可以选择
 将boot loader比如grub安装在MBR还是本身分区的boot sector，还可以配置菜单选项来加入windows启动选项。
+传统MBR分区表由于分区大小由4字节表示，即支持的最大分区为2TB左右，新型操作系统支持GPT（GUID Partition Table）。
+GPT的第一个扇区为了向上兼容仍然是传统的MBR，分区类型标识为EE表明是GPT引导。第二个扇区是GPT header描述GPT的元数据信息。
+从第三个扇区开始是128个128字节的GPT entry， 跟MBR中的分区表项类似。此外GPT在硬盘的最后的相应扇区会保存一份完整的备份。
 
+Linux文件系统与目录树。文件系统是组织磁盘分区的数据组织结构的描述及数据结构，这些文件系统要挂载在LINUX的目录树上才能被访问要，
+相应的目录的路径被称为挂载点。/目录是必须被挂载的。LINUX还可以挂载不同的设备，这些设备由udev进程接收驱动设备上传的中断
+并解析udev的配置的规则生成如/dev/hda1 这样的设备路径，再将这些块设备和字符设备挂载到不同的目录树上的挂载点。
