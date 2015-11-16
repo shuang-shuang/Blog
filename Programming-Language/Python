@@ -4,3 +4,16 @@ from module import * 不会导入_a;
 的magic object，程序员可以覆盖这些函数如(__init__, __add__, __name__)，但是不要定义自己的此类函数。
 两个前置下划线加最多一个后置下划线如__a_用于避免与子类的变量冲突，它会被自动转换为_ClassName__a_
 同理，函数名前置下划线表明该函数是私有函数（非权限限制）不愿为外界使用，但是可以通过_classname__a_访问。
+
+python的generator支持lazy evaluation，他是一个函数，函数体并不用return关键字返回函数结果而是使用yield关键字，
+yield语句执行时会先保存当前上下文（像执行函数切换一样），返回yield语句的值，当generator对象再次调用next函数时
+恢复到上次保存的上下文执行，因此Generator适合分解需要一次性消耗大量内存的任务。如下例子：
+def test():
+    yield 1
+    yield "the second"
+    yield 3
+
+g = test() # won't execute test but return a generator object
+print g.next()  # 1
+print g.next()  # the second
+print g.next()  # 3
