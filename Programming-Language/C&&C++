@@ -61,4 +61,6 @@ public:                                      vtptr: point to Array
 A * a = new B(); a.func1();
 When run a.func1(); Though a is type A but it points to Type B, so we get B's vtptr. then it looks up address of func1
 in B's vtable.
+virtual func() == 0; is called pure virtual function. It makes the class a abstract class which could not be instantiate, and all sub
+classes must implements those pure functions, otherwise they are abstract class too.
 
