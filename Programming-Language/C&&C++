@@ -64,3 +64,59 @@ in B's vtable.
 virtual func() == 0; is called pure virtual function. It makes the class a abstract class which could not be instantiate, and all sub
 classes must implements those pure functions, otherwise they are abstract class too.
 
+智能指针借助模板(template)封装了普通指针，实现引用计数，在对象不被使用后自动调用析构函数避免悬空指针(dangling pointer)及内存泄漏问题。
+class Test
+{
+public:
+	Test(string s)
+	{
+		str = s;
+		cout << "Test create\n";
+	}
+
+	~Test()
+	{
+		cout << "Test delete:" << str << endl;
+	}
+
+	string& getStr()
+	{
+		return str;
+	}
+
+	void setStr(string s)
+	{
+		str = s;
+	}
+
+	void print()
+	{
+		cout << str << endl;
+	}
+
+private:
+	string str;
+};
+
+
+int main()
+{
+	std::auto_ptr<Test> ptest(new Test("123"));
+	ptest -> setStr("hello");
+	ptest -> print();
+	ptest.get() -> print();
+	ptest -> getStr() += "world !";
+	(*ptest).print();
+	ptest.reset(new Test("123"));
+	ptest -> print();
+	return 0;
+}
+输出： 
+Test create
+hello
+hello
+helloworld !
+Test create
+Test delete:helloworld !
+123
+Test delete:123
